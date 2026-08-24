@@ -1,17 +1,30 @@
-import Form from "@/components/form/form";
+"use server";
+import NovaTarefa from "@/components/form/novaTarefa";
 import List from "@/components/list/list";
-import TemplateItem from "@/components/templateItem/templateitem";
+import axios from "axios";
+import type { Data } from "@/utils/types";
 
-export const metadata = {
-  title: "App Router",
-};
+export default async function Page() {
+  let tasks: Data[] = [];
 
-export default function Page() {
-  return <>
-    <h1>Seja bem-vindo ao To-Do List com Jest</h1>
-    <Form />
-    <List />
+  try {
+    const response = await axios.get<Data[]>(
+      `${process.env.NEXT_PUBLIC_URL_API}/tasks`,
+    );
+    tasks = response.data;
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      console.log("STATUS:", error.response?.status);
+    }
+  }
 
-    <TemplateItem text="Exemplo de tarefa" description="Esta é uma tarefa de exemplo" status="pending" />
-  </>;
+  return (
+    <>
+      <h1>Seja bem-vindo ao To-Do List com Jest</h1>
+
+      <NovaTarefa />
+
+      <List list={tasks} />
+    </>
+  );
 }

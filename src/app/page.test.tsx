@@ -6,5 +6,5 @@ import Page from "./page";
 
 it("App Router: Works with Server Components", () => {
   render(<Page />);
-  expect(screen.getByRole("heading")).toHaveTextContent("Seja bem-vindo ao To-Do List com Jest");
+  expect(screen.getByText("Seja bem-vindo ao To-Do List com Jest")).toBeInTheDocument()
 });

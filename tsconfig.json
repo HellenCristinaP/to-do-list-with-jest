@@ -18,7 +18,8 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/pages/*": ["src/components/*"],
-      "@/styles/*": ["styles/*"]
+      "@/styles/*": ["styles/*"],
+      "@/utils/*": ["utils/*"]
     },
     "ignoreDeprecations": "6.0",
     "baseUrl": "./src",
