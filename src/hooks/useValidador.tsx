@@ -24,7 +24,6 @@ export default function useValidadorForm(initialValues: FormValues) {
 
         if (!values.title.trim()) {
             newErrors.title = "O título é obrigatório.";
-            console.log(values.title.length)
         } else if (values.title.length < 3 || values.title.length > 50) {
             newErrors.title = "O título deve ter entre 3 e 50 caracteres.";
         }

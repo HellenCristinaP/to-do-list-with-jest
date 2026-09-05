@@ -1,4 +1,6 @@
 import useContadorDeTarefas from "./useContadorDeTarefas";
+import type { Data } from "@/utils/types";
+import { renderHook } from "@testing-library/react";
 
 describe("useContadorDeTarefas", () => {
   it("renders the component", () => {
@@ -17,7 +19,23 @@ describe("useContadorDeTarefas", () => {
       },
     ];
     const { contador } = useContadorDeTarefas(tasks);
-    
+
     expect(contador).toBe(2);
+
+    const { result } = renderHook(() => useContadorDeTarefas(tasks));
+
+    expect(result.current.contador).toBe(2);
+  });
+
+  it("return 0", () => {
+    const tasks = <Data[]>[];
+
+    const { contador } = useContadorDeTarefas(tasks);
+
+    expect(contador).toBe(0);
+
+    const { result } = renderHook(() => useContadorDeTarefas(tasks));
+
+    expect(result.current.contador).toBe(0);
   });
 });

@@ -9,7 +9,7 @@ export default async function Page() {
 
   try {
     const response = await axios.get<Data[]>(
-      `${process.env.NEXT_PUBLIC_URL_API}/tasks`,
+      `${process.env.NEXT_PUBLIC_URL_API}/tasks`
     );
     tasks = response.data;
   } catch (error) {

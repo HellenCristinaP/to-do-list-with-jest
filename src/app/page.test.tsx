@@ -1,10 +1,40 @@
-/**
- * @jest-environment jsdom
- */
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import Page from "./page";
+import axios from "axios";
 
-it("App Router: Works with Server Components", () => {
-  render(<Page />);
-  expect(screen.getByText("Seja bem-vindo ao To-Do List com Jest")).toBeInTheDocument()
-});
+jest.mock('axios')
+
+describe("Page", () => {
+  it("App Router: Works with Server Components", async () => {
+    const ResolvedPage = await Page();
+    render(ResolvedPage);
+    expect(screen.getByText("Seja bem-vindo ao To-Do List com Jest")).toBeInTheDocument()
+  });
+
+  it("If the requires get works", async () => {
+    const mockTask = {
+      id: 1,
+      text: "Lavar louça",
+      description: "lavar meio dia",
+      status: "pending"
+    };
+
+
+    const ResolvedPage = await Page();
+    render(ResolvedPage);
+
+    
+    axios.get.mockResolvedValueOnce({
+      data: mockTask
+    });
+    
+    await waitFor(() =>
+      expect(axios.get).toHaveBeenCalledWith(
+        `${process.env.NEXT_PUBLIC_URL_API}/tasks`
+      )
+    );
+    
+    expect(screen.getByText("Lavar louça")).toBeInTheDocument()
+  })
+})
+

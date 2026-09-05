@@ -2,7 +2,7 @@
 
 ## 📌 Descrição do Projeto
 
-Aplicação simples de **listagem e adição de tarefas**, desenvolvida com **Next.js 15**, **TypeScript**, **Jest*- e **Testing Library**.
+Aplicação simples de **listagem e adição de tarefas**, desenvolvida com **Next.js 15**, **TypeScript**, **Jest\*- e **Testing Library\*\*.
 
 O projeto tem como objetivo colocar em prática conceitos de **testes unitários em Next.js 15**, trabalhando com:
 
@@ -34,29 +34,29 @@ Implementar e testar uma aplicação de gerenciamento de tarefas que permita:
 ### Next.js e TypeScript
 
 - [x] Utilizar **Next.js 15**.
-- [ ] Utilizar o **App Router**.
+- [x] Utilizar o **App Router**.
 - [x] Utilizar **TypeScript**.
 
 ### Server Component
 
-- [X] Criar um **Server Component*- em `app/page.tsx`.
-- [X] O Server Component deve carregar a lista de tarefas.
+- [x] Criar um \*_Server Component_- em `app/page.tsx`.
+- [x] O Server Component deve carregar a lista de tarefas.
 - [x] A página deve ser capaz de renderizar as tarefas carregadas.
 
 ### Client Component
 
-- [X] Criar um Client Component chamado `<NovaTarefa />`.
-- [X] O componente deve permitir a adição de novas tarefas.
-- [X] O formulário deve ser **controlado**.
+- [x] Criar um Client Component chamado `<NovaTarefa />`.
+- [x] O componente deve permitir a adição de novas tarefas.
+- [x] O formulário deve ser **controlado**.
 - [x] O componente deve possuir um campo para entrada da tarefa.
 - [x] O componente deve possuir um botão para submissão.
 - [x] Deve existir validação do input antes da submissão.
 
 ### Hook personalizado
 
-- [X] Criar um hook chamado `useContadorDeTarefas`.
-- [X] O hook deve retornar a quantidade atual de tarefas.
-- [X] O valor retornado pelo hook deve ser testável de forma isolada.
+- [x] Criar um hook chamado `useContadorDeTarefas`.
+- [x] O hook deve retornar a quantidade atual de tarefas.
+- [x] O valor retornado pelo hook deve ser testável de forma isolada.
 
 ### Dados das tarefas
 
@@ -66,7 +66,7 @@ Os dados podem ser implementados de uma das seguintes formas:
 
 **ou**
 
-- [X] Chamada para a API.
+- [x] Chamada para a API.
 
 ---
 
@@ -83,27 +83,27 @@ Os testes devem verificar os principais comportamentos da aplicação.
 
 Criar testes para:
 
-- [ ] Verificar a renderização correta do componente.
-- [ ] Verificar a existência do campo de input.
-- [ ] Verificar a existência do botão.
-- [ ] Testar a validação do input.
-- [ ] Testar a submissão do formulário.
-- [ ] Verificar o comportamento esperado ao adicionar uma nova tarefa.
+- [x] Verificar a renderização correta do componente.
+- [x] Verificar a existência do campo de input.
+- [x] Verificar a existência do botão.
+- [x] Testar a validação do input.
+- [x] Testar a submissão do formulário.
+- [] Verificar o comportamento esperado ao adicionar uma nova tarefa.
 
 ---
 
 ## Hook `useContadorDeTarefas`
 
-- [ ] Testar o hook de forma isolada.
-- [ ] Utilizar `renderHook`.
-- [ ] Verificar o valor retornado pelo hook.
-- [ ] Garantir que o número de tarefas retornado esteja correto.
+- [x] Testar o hook de forma isolada.
+- [x] Utilizar `renderHook`.
+- [x] Verificar o valor retornado pelo hook.
+- [x] Garantir que o número de tarefas retornado esteja correto.
 
 ---
 
 ## Página
 
-- [ ] Testar a renderização da página.
+- [x] Testar a renderização da página.
 - [ ] Verificar se as tarefas são exibidas corretamente.
 - [ ] Utilizar os dados locais/simulados do projeto.
 - [ ] Não depender de uma API externa real para os testes.
@@ -114,35 +114,24 @@ Criar testes para:
 
 Os testes devem verificar, no mínimo:
 
-- [ ] Renderização correta dos elementos.
-- [ ] Valores retornados pelo hook.
-- [ ] Comportamento de interação do formulário.
-- [ ] Submissão de novas tarefas.
-- [ ] Validação do input.
+- [x] Renderização correta dos elementos.
+- [x] Valores retornados pelo hook.
+- [x] Comportamento de interação do formulário.
+- [x] Submissão de novas tarefas.
+- [x] Validação do input.
 
 ---
 
-# ⚙️ 3. Tecnologias
-
-- [ ] Next.js 15
-- [ ] TypeScript
-- [ ] React
-- [ ] Jest
-- [ ] Testing Library
-- [ ] App Router
-
----
-
-# 🧰 4. Ferramentas de Teste
+# 🧰 3. Ferramentas de Teste
 
 O projeto pode utilizar os seguintes recursos recomendados no enunciado:
 
-- [ ] `jest.mock`
-- [ ] `render`
-- [ ] `screen`
-- [ ] `fireEvent`
+- [x] `jest.mock`
+- [x] `render`
+- [x] `screen`
+- [x] `fireEvent`
 - [ ] `act`
-- [ ] `renderHook`
+- [x] `renderHook`
 
 ---
 
@@ -191,17 +180,17 @@ Antes da entrega, verificar:
 
 ### Aplicação
 
-- [ ] Next.js 15
-- [ ] TypeScript
-- [ ] App Router
-- [ ] `app/page.tsx` como Server Component
-- [ ] Lista de tarefas funcionando
-- [ ] `<NovaTarefa />` como Client Component
-- [ ] Formulário controlado
-- [ ] Validação do input
-- [ ] Adição de tarefas funcionando
-- [ ] `useContadorDeTarefas` implementado
-- [ ] Contagem de tarefas funcionando
+- [x] Next.js latest
+- [x] TypeScript
+- [x] App Router
+- [x] `app/page.tsx` como Server Component
+- [x] Lista de tarefas funcionando
+- [x] `<NovaTarefa />` como Client Component
+- [x] Formulário controlado
+- [x] Validação do input
+- [x] Adição de tarefas funcionando
+- [x] `useContadorDeTarefas` implementado
+- [x] Contagem de tarefas funcionando
 
 ### Testes
 
@@ -211,23 +200,12 @@ Antes da entrega, verificar:
 - [ ] Teste de validação
 - [ ] Teste do botão
 - [ ] Teste de submissão
-- [ ] Teste do `useContadorDeTarefas`
-- [ ] Uso de `renderHook`
+- [x] Teste do `useContadorDeTarefas`
+- [x] Uso de `renderHook`
 - [ ] Teste da renderização da página
 - [ ] Teste da lista de tarefas
 - [ ] Verificação dos valores retornados pelo hook
 - [ ] Cobertura dos fluxos principais
-
-### Entrega
-
-- [ ] Repositório no GitHub
-- [ ] Código-fonte enviado
-- [ ] Testes enviados
-- [ ] README criado
-- [ ] Instruções de instalação
-- [ ] Instruções de execução
-- [ ] Instruções dos testes
-- [ ] Link do repositório compartilhado
 
 ---
 

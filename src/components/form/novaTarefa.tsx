@@ -42,7 +42,6 @@ export default function NovaTarefa() {
                 <form onSubmit={handleSubmit}>
                     <legend>Adicionar Tarefa</legend>
                     <div>
-
                         <input
                             type="text"
                             placeholder="Digite uma tarefa..."

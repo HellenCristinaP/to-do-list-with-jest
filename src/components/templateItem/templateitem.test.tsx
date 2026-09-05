@@ -31,7 +31,6 @@ describe("TemplateItem", () => {
         expect(screen.getByRole("checkbox")).not.toBeChecked()
     })
 
-
     it("should delete item, if I click button 'Excluir'", () => {
         fireEvent.click(
             screen.getByRole("button", { name: "Excluir" })
