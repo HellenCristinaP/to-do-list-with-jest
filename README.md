@@ -4,9 +4,11 @@
 1º Clone o projeto
 
 git clone https://github.com/HellenCristinaP/to-do-list-with-jest
+
 2º Instale as depêndencias e rode o projeto
 
 npm install
+
 3º Crie uma pasta .env no projeto raiz e crie duas variáveis:
 
 NEXT_PUBLIC_URL_API={URL da API aqui}
