@@ -1,18 +1,15 @@
 # 📝 To-Do List — Testes Unitários com Jest
 
-## 📌 Descrição do Projeto
+## Como rodar esse projeto
+1º Clone o projeto
 
-Aplicação simples de **listagem e adição de tarefas**, desenvolvida com **Next.js 15**, **TypeScript**, **Jest\*- e **Testing Library\*\*.
+git clone https://github.com/HellenCristinaP/to-do-list-with-jest
+2º Instale as depêndencias e rode o projeto
 
-O projeto tem como objetivo colocar em prática conceitos de **testes unitários em Next.js 15**, trabalhando com:
+npm install
+3º Crie uma pasta .env no projeto raiz e crie duas variáveis:
 
-- Server Components;
-- Client Components;
-- Hooks personalizados;
-- Formulários controlados;
-- Componentes reutilizáveis;
-- Testes unitários;
-- App Router.
+NEXT_PUBLIC_URL_API={URL da API aqui}
 
 ---
 
