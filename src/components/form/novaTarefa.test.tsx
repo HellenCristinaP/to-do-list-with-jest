@@ -59,10 +59,10 @@ describe("NovaTarefa", () => {
 
         expect(screen.getByText("O título é obrigatório.")).not.toBeInTheDocument()
 
-        await waitFor(() => expect(axios.post).toHaveBeenCalledTimes(1))
+        await waitFor(() => expect(mockAPI.post).toHaveBeenCalledTimes(1))
 
         await waitFor(() =>
-            expect(axios.post).toHaveBeenCalledWith(
+            expect(mockAPI.post).toHaveBeenCalledWith(
                 `${process.env.NEXT_PUBLIC_URL_API}/tasks`,
                 {
                     text: 'Lavar louça',

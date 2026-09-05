@@ -18,18 +18,18 @@ describe("Page", () => {
       description: "lavar meio dia",
       status: "pending"
     };
-
+    const mockAPI = jest.mocked(axios);
 
     const ResolvedPage = await Page();
     render(ResolvedPage);
 
     
-    axios.get.mockResolvedValueOnce({
+    mockAPI.get.mockResolvedValueOnce({
       data: mockTask
     });
     
     await waitFor(() =>
-      expect(axios.get).toHaveBeenCalledWith(
+      expect(mockAPI.get).toHaveBeenCalledWith(
         `${process.env.NEXT_PUBLIC_URL_API}/tasks`
       )
     );
