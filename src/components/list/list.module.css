@@ -1,0 +1,17 @@
+.h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.span {
+    margin-top: 1rem;
+}
+
+.ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}

@@ -19,12 +19,12 @@ export default async function Page() {
   }
 
   return (
-    <>
+    <div>
       <h1>Seja bem-vindo ao To-Do List com Jest</h1>
 
       <NovaTarefa />
 
       <List list={tasks} />
-    </>
+    </div>
   );
 }

@@ -2,6 +2,7 @@
 import axios from "axios";
 import { useTaskStore } from "@/utils/zustand";
 import useValidadorForm from "hooks/useValidador";
+import styles from "./form.module.css";
 
 export default function NovaTarefa() {
     const addTask = useTaskStore((state) => state.addTask)
@@ -38,8 +39,8 @@ export default function NovaTarefa() {
 
     return (
         <>
-            <fieldset>
-                <form onSubmit={handleSubmit}>
+            <fieldset className={styles.fieldset}>
+                <form onSubmit={handleSubmit} className={styles.form}>
                     <legend>Adicionar Tarefa</legend>
                     <div>
                         <input
@@ -48,9 +49,10 @@ export default function NovaTarefa() {
                             name="title"
                             value={values.title}
                             onChange={handleChange}
+                            className={styles.input}
                         />
                         {errors.title && (
-                            <span style={{ color: "red" }}>{errors.title}</span>
+                            <span className={styles.error}>{errors.title}</span>
                         )}
                     </div>
                     <div>
@@ -60,9 +62,10 @@ export default function NovaTarefa() {
                             name="description"
                             value={values.description}
                             onChange={handleChange}
+                            className={styles.input}
                         />
                         {errors.description && (
-                            <span style={{ color: "red" }}>{errors.description}</span>
+                            <span className={styles.error}>{errors.description}</span>
                         )}
                     </div>
                     <button type="submit">Adicionar</button>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import type { Data } from "@/utils/types";
 import { deleteTaskServ } from "@/utils/services"
 import { useTaskStore } from "@/utils/zustand";
+import styles from "./templateitem.module.css";
 
 export default function TemplateItem({ Data }: { Data: Data; }) {
     const [itemStatus, setItemStatus] = useState("pending");
@@ -27,16 +28,23 @@ export default function TemplateItem({ Data }: { Data: Data; }) {
 
     return (
         <div data-testid="template-item">
-            <li className="flex flex-col gap-2 border border-gray-300 rounded-md p-4" data-testid="item">
+            <li className={styles.li} data-testid="item">
                 <input
                     type="checkbox"
                     value={itemStatus}
                     onChange={handleCheckBoxChange}
+                    className={styles.checkbox}
                 />
-                <p>{Data.text}</p>
-                {Data.description && <p>{Data.description}</p>}
-                <button >Editar</button>
-                <button onClick={handleDeleteItem}>Excluir</button>
+                <div className={styles.content}>
+                    <p>{Data.text}</p>
+                    {Data.description && <p className={styles.description}>{Data.description}</p>}
+                </div>
+                <div className={styles.buttons}>
+                    <button className={styles.button}>Editar</button>
+                    <button className={`${styles.button} ${styles.excluir}`} id="excluir" onClick={handleDeleteItem}>
+                        Excluir
+                    </button>
+                </div>
             </li>
         </div>
     );

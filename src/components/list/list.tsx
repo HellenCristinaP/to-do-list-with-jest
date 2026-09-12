@@ -4,6 +4,7 @@ import { useTaskStore } from '@/utils/zustand'
 import type { Data } from "@/utils/types";
 import { useEffect } from "react";
 import useContador from "hooks/useContadorDeTarefas";
+import styles from "./list.module.css";
 
 type ListProps = {
     list: Data[];
@@ -19,10 +20,10 @@ export default function List({ list }: ListProps) {
     }, [list, setTasks]);
 
     return (
-        <>
-            <h2>Lista de Tarefas</h2>
-            <span>{contador}</span>
-            <ul>
+        <div className={styles.div}>
+            <h2 className={styles.h2}>Lista de Tarefas</h2>
+            <span className={styles.span}>quantidade de tarefas: {contador}</span>
+            <ul className={styles.ul}>
                 {
                     tasks.map((task) => (
                         <TemplateItem
@@ -32,6 +33,6 @@ export default function List({ list }: ListProps) {
                     ))
                 }
             </ul>
-        </>
+        </div>
     );
 }

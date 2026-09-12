@@ -1,0 +1,52 @@
+.li {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid #a3a3a3;
+    border-radius: 0.5rem;
+    padding: 0.5rem 2rem;
+}
+
+.checkbox {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    .description {
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+}
+
+.excluir {
+    background-color: #dc3545;
+
+    &:hover {
+        background-color: #c82333;
+    }
+}

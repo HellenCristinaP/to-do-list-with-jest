@@ -13,27 +13,26 @@ describe("Page", () => {
 
   it("If the requires get works", async () => {
     const mockTask = {
-      id: 1,
+      _id: 1,
       text: "Lavar louça",
       description: "lavar meio dia",
       status: "pending"
     };
     const mockAPI = jest.mocked(axios);
+    
+    mockAPI.get.mockResolvedValueOnce({
+      data: [mockTask]
+    });
 
     const ResolvedPage = await Page();
     render(ResolvedPage);
-
-    
-    mockAPI.get.mockResolvedValueOnce({
-      data: mockTask
-    });
     
     await waitFor(() =>
-      expect(mockAPI.get).toHaveBeenCalledWith(
+      expect(axios.get).toHaveBeenCalledWith(
         `${process.env.NEXT_PUBLIC_URL_API}/tasks`
       )
     );
-    
+
     expect(screen.getByText("Lavar louça")).toBeInTheDocument()
   })
 })

@@ -43,6 +43,7 @@ describe("NovaTarefa", () => {
             description: "lavar meio dia",
             status: "pending"
         };
+
         const inputText = screen.getByPlaceholderText('Digite uma tarefa...');
         const inputDescription = screen.getByPlaceholderText('Digite a descrição da tarefa...');
         const submitBtn = screen.getByRole('button', { name: /adicionar/i });
@@ -57,7 +58,7 @@ describe("NovaTarefa", () => {
         fireEvent.change(inputDescription, { target: { value: "lavar meio dia" } })
         fireEvent.click(submitBtn)
 
-        expect(screen.getByText("O título é obrigatório.")).not.toBeInTheDocument()
+        expect(screen.queryByText("O título é obrigatório.")).not.toBeInTheDocument()
 
         await waitFor(() => expect(mockAPI.post).toHaveBeenCalledTimes(1))
 

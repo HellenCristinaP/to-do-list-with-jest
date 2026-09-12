@@ -3,15 +3,20 @@
 ## Como rodar esse projeto
 1º Clone o projeto
 
-git clone https://github.com/HellenCristinaP/to-do-list-with-jest
+`git clone https://github.com/HellenCristinaP/to-do-list-with-jest`
 
 2º Instale as depêndencias e rode o projeto
 
-npm install
+`npm install`
 
 3º Crie uma pasta .env no projeto raiz e crie duas variáveis:
 
-NEXT_PUBLIC_URL_API={URL da API aqui}
+`NEXT_PUBLIC_URL_API={URL da API aqui}`
+
+4º Executar os testes se precisar:
+
+`npm run test` -> para acessar o jest --wacth
+`npm run test:ci` -> para acessar o jest --ci
 
 ---
 
@@ -103,9 +108,8 @@ Criar testes para:
 ## Página
 
 - [x] Testar a renderização da página.
-- [ ] Verificar se as tarefas são exibidas corretamente.
-- [ ] Utilizar os dados locais/simulados do projeto.
-- [ ] Não depender de uma API externa real para os testes.
+- [X] Verificar se as tarefas são exibidas corretamente.
+- [X] Não depender de chamadas reais da API para os testes.
 
 ---
 
